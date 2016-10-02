@@ -41,13 +41,13 @@ void CreateBinaryTree(Node **node)
     CreateBinaryTree(&((*node)->rChild));
 }
 
-static int leafCount = 0;
+int leafCount = 0;
 
-int LeafCountBinaryCount(Node *node)
+void LeafCountBinaryCount(Node *node)
 {
     if (node == NULL)
     {
-        return leafCount;
+        return;
     }
 
     if (node ->lChild == NULL && node ->rChild == NULL)
@@ -58,7 +58,7 @@ int LeafCountBinaryCount(Node *node)
     LeafCountBinaryCount(node->lChild);
     LeafCountBinaryCount(node->rChild);
 
-    return leafCount;
+    return;
 }
 
 int main(int argc, const char * argv[])
