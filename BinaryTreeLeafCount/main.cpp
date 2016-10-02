@@ -68,22 +68,9 @@ int main(int argc, const char * argv[])
     cout << "请输入二叉树的节点，输入-1结束:"<< endl;
     CreateBinaryTree(&node);
 
+    cout << "叶子节点的个数为：";
     LeafCountBinaryCount(node);
     cout << leafCount << endl;
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
